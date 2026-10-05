@@ -1,6 +1,5 @@
-/* ==========================================================================
-                    CENTRAL DATA STORE & LOCAL STORAGE ENGINE
-       ========================================================================== */
+// CENTRAL DATA STORE & LOCAL STORAGE ENGINE
+
 const STORAGE_KEY = "INVENTO_PRO_DB_V1";
 
 const defaultDemoData = {
@@ -394,8 +393,8 @@ function renderProductsTable() {
             <td><strong>${p.stock}</strong></td>
             <td>${statusBadge}</td>
             <td>
-              <button class="btn btn-secondary btn-sm" onclick="editProduct('${p.id}')">Edit<i class="fa-solid fa-pen"></i></button>
-              <button class="btn btn-danger btn-sm" onclick="deleteProduct('${p.id}')">Delete<i class="fa-solid fa-trash"></i></button>
+              <button class="btn btn-secondary btn-sm" onclick="editProduct('${p.id}')"><i class="fa-solid fa-pen"></i></button>
+              <button class="btn btn-danger btn-sm" onclick="deleteProduct('${p.id}')"><i class="fa-solid fa-trash"></i></button>
             </td>
           </tr>
         `;
@@ -499,9 +498,7 @@ function renderCategoriesTable() {
             <td>${c.description || "-"}</td>
             <td><span class="badge badge-info">${prodCount} Items</span></td>
             <td>
-              <button class="btn btn-secondary btn-sm" onclick="deleteCategory('${c.id}')">Edit<i class="fa-solid fa-trash"></i></button>
-
-              <button class="btn btn-danger btn-sm" onclick="deleteCategory('${c.id}')">Delete<i class="fa-solid fa-trash"></i></button>
+              <button class="btn btn-danger btn-sm" onclick="deleteCategory('${c.id}')"><i class="fa-solid fa-trash"></i></button>
             </td>
           </tr>
         `;
